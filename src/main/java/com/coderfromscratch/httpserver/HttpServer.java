@@ -3,12 +3,11 @@ package com.coderfromscratch.httpserver;
 import com.coderfromscratch.httpserver.config.Configuration;
 import com.coderfromscratch.httpserver.config.ConfigurationManager;
 import com.coderfromscratch.httpserver.core.ServerListenerThread;
+import com.coderfromscratch.httpserver.util.FileOperations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -22,6 +21,26 @@ public class HttpServer {
     private final static Logger LOGGER = LoggerFactory.getLogger(HttpServer.class);
 
     public static void main(String[] args){
+
+
+        /*
+        BufferedReader bf = null;
+        try {
+            bf = new BufferedReader(new FileReader("src/main/resources/test.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String line;
+
+        try {
+            while ((line = bf.readLine()) != null){
+                System.out.println(line);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }*/
+
 
         LOGGER.info("Server starting...");
 
